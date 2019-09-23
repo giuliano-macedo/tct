@@ -61,9 +61,9 @@ def fig_gap(results):
 	plt.close()
 def fig_time(results):
 	index=list(results.values())[0].inputs
-	df=pd.DataFrame({result.label:result.times for result in results.values()},index=index)
+	df=pd.DataFrame({result.label:result.times/1e6 for result in results.values()},index=index)
 	df.plot.barh()
-	plt.xlabel(r"Tempo em $\mu$segundos")
+	plt.xlabel(r"Tempo em segundos")
 	plt.title("Gráfico de tempo de execução para cada instância de todos os métodos")
 	plt.figure()
 	plt.close()
