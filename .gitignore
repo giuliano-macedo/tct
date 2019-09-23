@@ -3,5 +3,6 @@
 !*.*
 *.csv
 !grasp_settings.csv
+*.o
 __pycache__
 results
