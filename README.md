@@ -1,7 +1,7 @@
 # Trabalhos Da Disciplina Teoria Da Computação - UFMS - CPPP
 Comparar heuristicas para o problema do caixeiro viajante, utilizando como critério 
 o tempo de processamento, qualidade da resposta e memória gasta por processo (memória residente máxima)
-para a heuristica gulosa baseada no item com maior custo benefício,GRASP e tabu.
+para a heuristica gulosa baseada no item com maior custo benefício,GRASP e busca tabu.
 ## Pré requisitos
 * g++ >= 5
 * make
