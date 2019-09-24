@@ -44,7 +44,7 @@ def latex_gap_mean(results):
 		\end{table}
 	""".replace("\t","")[1:]
 	with open(os.path.join("results","gap.tex"),"w") as f:
-		table="\\\\ \\hline\n".join(["%s & %s"%(t[0],str(t[1])) for t in ans])
+		table="\\\\ \\hline\n".join(["%s & %s"%(t[0],str(t[1])) for t in ans]+[""])
 		f.write(template%table)
 def fig_gap(results):
 	exact=results["exact"]
