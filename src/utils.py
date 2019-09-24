@@ -69,9 +69,9 @@ def fig_time(results):
 	plt.close()
 def fig_mem(results):
 	index=list(results.values())[0].inputs
-	df=pd.DataFrame({result.label:result.rsss/1e6 for result in results.values()},index=index)
+	df=pd.DataFrame({result.label:result.rsss/1e3 for result in results.values()},index=index)
 	df.plot.barh()
-	plt.xlabel(r"memória residente máxima em GB")
+	plt.xlabel(r"memória residente máxima em MB")
 	plt.title("Gráfico de memória residente máxima para cada instância de todos os métodos")
 	plt.figure()
 	plt.close()
