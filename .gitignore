@@ -3,6 +3,7 @@
 !*.*
 *.csv
 !grasp_settings.csv
+!tabu_settings.csv
 *.o
 __pycache__
 results

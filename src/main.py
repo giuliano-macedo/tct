@@ -5,6 +5,7 @@ from utils import *
 parser=argparse.ArgumentParser()
 parser.add_argument("inputs",type=dirtype,default="../entradas",nargs="?",help="directory with .in files")
 parser.add_argument("--grasp_settings",type=str,default="grasp_settings.csv",help="csv with some grasp settings")
+parser.add_argument("--tabu_settings",type=str,default="tabu_settings.csv",help="csv with some tabu settings")
 parser.add_argument("-f","--force",action="store_true",help="force redo tests")
 args=parser.parse_args()
 
@@ -12,7 +13,8 @@ args=parser.parse_args()
 bins=[
 	"exact",
 	"greedy",
-	"grasp"
+	"grasp",
+	"tabu"
 ]
 compile_if_needed(bins)
 
