@@ -56,7 +56,7 @@ def fig_gap(results):
 	df=pd.DataFrame(data,index=exact.inputs)
 	df.plot.barh()
 	plt.xlabel("Gap (%)")
-	plt.title("Gráfico de gap para cada instância do guloso e grasp com diferentes parâmetros")
+	plt.title("Gráfico de gap para cada instância de todos os métodos com diferentes parâmetros")
 	plt.figure()
 	plt.close()
 def fig_time(results):
@@ -107,6 +107,9 @@ class Grasp:
 		self.no_it=no_it
 	def __call__(self,fname):
 		return common_command("grasp",fname,str(self.window_size),str(self.no_it))
+class Tabu(Grasp):
+	def __call__(self,fname):
+		return common_command("tabu",fname,str(self.window_size),str(self.no_it))
 def common_command(command,*args):
 	args=["./"+command]+list(args)
 	p = subprocess.Popen(args,stdout=subprocess.PIPE)

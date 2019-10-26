@@ -21,10 +21,10 @@ make
 ## Uso
 ```shell
 cd src
-python3 main.py
+./main.py
 ```
 após disso o programa irá compilar se necessário os arquivos fontes em C++, e também gerar os arquivos de resultado .csv, e depois mostrar os gráficos dos resultados.
 para mais opções use o seguinte comando
 ```shell
-python3 main.py --help
+./main.py --help
 ```
